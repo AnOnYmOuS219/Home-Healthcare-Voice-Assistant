@@ -22,20 +22,21 @@ for command in data['nlu']:
 # print(intents)
 # print(responses)
 
-def evaluale(text):
+def evaluate(text):
     output = classify(text)
 
     entity = output['entity']
     conf = float(output['conf'])
 
-    # print('You said: {}  Confidence: {}'.format(text, conf))
+    print('You said: {}  Confidence: {}'.format(text, conf))
 
-    # if conf < 0.997:
-    #     return
+    if conf < 0.9:
+        return
+    
     idx = -1
     print(len(intents))
     for i in range(len(intents)):
-        print(intents[i])
+        # print(intents[i])
         if intents[i] == entity:
             idx = i
             break
@@ -73,5 +74,5 @@ while True:
         result = json.loads(result)
 
         print(result['text'])
-        evaluale(result['text'])
+        evaluate(result['text'])
 
