@@ -2,20 +2,11 @@ nlu:
   - intent: problem_headache
     response: Headache
     examples:
-      - hdache
-      - hadac
-      - headac
-      - hdachr
-      - headacha
-      - hadache
-      - hdce
-      - headace
-      - i have headach
+      - i have headache
       - headache
       - headach
       - a headache
       - i have head pain
-      - i have headache
       - also  headache
       - a head ache
       - my head is paining
@@ -29,15 +20,11 @@ nlu:
       - a constant, dull ache on both sides
       - pain spread to or from the neck
       - restlessness
-      - a headach
-      - i have ead pain
-      - i hae headache
-      - m headspaining
-      - head pai
-      - i have pin in my head
-      - A painful sensation in anypart of the head ranging from sharp to dull
-      - as if thesa hav a tght band around the head
-      - a onstant, dull ache n both sies
+      - i had headache
+      - A painful sensation in anypart of the head
+      - as if there is a tight band around the head
+      - forehead pain
+      - pain in two sides of head
 
   - intent: problem_cough
     response: Cough
@@ -60,9 +47,9 @@ nlu:
     response: Nasal Blockage
     examples:
       - nasal blockage
-      - i have nasal blockage
+      - i have a nasal blockage
       - my nose is blocked
-      - i cant breathe in night
+      - i can't breathe in night
       - i have problem in breathing while sleeping
       - stuffy nose
       - nassal passages swollen with excess fluid
@@ -188,13 +175,13 @@ nlu:
       - colour of skin becoming red
       - redness of skin
       - itching in hands and legs
-      - iching on skin
+      - itching on skin
       - i have itchiness everywhere
       - i have swelling skin
       - swelled skin
       - blisters on my skin
       - i have skin blsters
-      - blstrs
+      - blisters
       - my skin is irritating
       - i have irritation
       - i have scaly skin
@@ -470,7 +457,8 @@ nlu:
   - intent: problem_ringworm
     examples:
       - itchy skin
-      - ring    -shaped rash
+      - ring
+      - shaped rash
       - red, scaly, cracked skin
       - hair loss
       - i have ring worm
