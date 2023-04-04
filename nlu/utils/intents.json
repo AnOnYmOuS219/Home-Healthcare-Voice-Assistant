@@ -39,6 +39,18 @@
         "Can you help me with my problem?"
       ],
       "responses": [""]
+    },
+    {
+      "tag": "recognize_remedy",
+      "patterns": [
+        "Please tell the solution to my disease",
+        "Tell me the remedy",
+        "Can you tell me a home remedy to my problem?",
+        "Recognize remedy",
+        "I want to check what can I do resolving the disease at home",
+        "tell me the home treatment to my problem"
+      ],
+      "responses": [""]
     }
   ]
 }

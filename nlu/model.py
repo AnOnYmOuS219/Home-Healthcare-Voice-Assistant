@@ -45,7 +45,7 @@ for i, inp in enumerate(inputs):
     for k, ch in enumerate(bytes(inp.encode('utf-8'))):
         input_data[i, k, int(ch)] = 1.0
 
-makeLabelsFile(outputs)
+makeLabelsFile(outputs, 'entities')
 
 labels = open('nlu\entities.txt', 'r', encoding='utf-8').read().split('\n')
 

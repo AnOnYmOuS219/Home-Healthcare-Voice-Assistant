@@ -1,0 +1,44 @@
+seizure
+Heat Stroke
+Cold
+Broken Toe
+Fracture
+Strains
+Cough
+animal bite
+Testicle Pain
+Choking
+CPR
+Normal Bleeding
+Cuts
+Fainting
+Heat Exhaustion
+Splinter
+Skin problems
+Gastrointestinal problems
+snake bite
+nose bleed
+Poison
+Frost bite
+stings
+Diarrhea
+Chemical Burn
+Wound
+Teeth
+Pulled Muscle
+Insect Bites
+Rash
+Vertigo
+Sore Throat
+Abdonominal Pain
+Sprains
+Fever
+Bruises
+Nasal Congestion
+Rectal bleeding
+Abrasions
+Sun Burn
+Eye Injury
+Head Injury
+Headache
+Drowning

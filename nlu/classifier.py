@@ -31,3 +31,31 @@ def classify(text):
     idx = out.argmax()
 
     return {"entity" : idx2label[idx], "conf" : max(out[0])}
+
+
+labels_remedies = open('nlu\entities_remedies.txt', 'r', encoding='utf-8').read().split('\n')
+model_remedies = load_model('nlu\model_remedies.h5')
+
+label2idx_r = {}
+idx2label_r = {}
+
+for k, label in enumerate(labels_remedies):
+    label2idx_r[label] = k
+    idx2label_r[k] = label
+
+def classify_remedies(text):
+    x = np.zeros((1, 75, 256), dtype='float32')
+
+    text = preProcessInputs(text)
+    print(text)
+
+    if len(text) > 75:
+        text = text[:75]
+
+    for k, ch in enumerate(bytes(text.encode('utf-8'))):
+        x[0, k, int(ch)] = 1.0
+
+    out = model_remedies.predict(x)
+    idx = out.argmax()
+
+    return {"entity" : idx2label_r[idx], "conf" : max(out[0])}
