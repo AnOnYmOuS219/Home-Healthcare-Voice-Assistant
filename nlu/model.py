@@ -11,9 +11,10 @@ from utils.multi_classification_utils import preProcessInputs, makeLabelsFile
 
 def deepLearningModel(sent_max_len):
     model = Sequential()
+    # model.add(Dropout(0.2))
+    model.add(LSTM(256, return_sequences=True))
     model.add(Dropout(0.2))
-    model.add(LSTM(128))
-    model.add(Dropout(0.2))
+    model.add(LSTM(128, return_sequences=False))
     model.add(Dense(len(labels), activation='softmax'))
 
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['acc'])
@@ -64,5 +65,5 @@ for output in outputs:
 output_data = to_categorical(output_data, len(labels))
 
 model = deepLearningModel(75)
-model.fit(input_data, output_data, epochs=1000, batch_size=32)
+model.fit(input_data, output_data, epochs=256, batch_size=32)
 model.save('nlu\model.h5')

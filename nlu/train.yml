@@ -7,7 +7,7 @@ nlu:
       - headach
       - a headache
       - i have head pain
-      - also  headache
+      - also headache
       - a head ache
       - my head is paining
       - my head is aching
@@ -168,8 +168,7 @@ nlu:
       - irritation in skin
       - i have scaly skin
       - my skin is scaly skin
-      - scaly skn
-      - scly skn
+      - scaly skin
       - i have redness on skin
       - red skin
       - colour of skin becoming red
@@ -593,7 +592,7 @@ nlu:
       - anaemia
       - my hemoglobin level is too low
       - I’m suffering from anaemia
-      - im suffering from anaemia
+      - i am suffering from anaemia
       - lower haemoglobin level
       - low haemoglobin count
     response: Anaemia

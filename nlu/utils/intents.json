@@ -1,0 +1,44 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hey",
+        "Hi",
+        "How are you doing?",
+        "How's it going",
+        "How is it going?",
+        "Hi there",
+        "Hey there",
+        "Good day",
+        "What is up?"
+      ],
+      "responses": ["Hi there", "Hello", "Hi, what can I do for you?"]
+    },
+    {
+      "tag": "quit",
+      "patterns": [
+        "Bye",
+        "Stop",
+        "Quit",
+        "I want to quit",
+        "Good bye",
+        "I have to go",
+        "I want to exit"
+      ],
+      "responses": ["Bye"]
+    },
+    {
+      "tag": "recognize_disease",
+      "patterns": [
+        "Please find my disease",
+        "Tell me my problem",
+        "I am sufferring from a disease",
+        "Recognize disease",
+        "I want to check what am I sufferring with",
+        "Can you help me with my problem?"
+      ],
+      "responses": [""]
+    }
+  ]
+}
