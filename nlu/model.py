@@ -12,9 +12,7 @@ from utils.multi_classification_utils import preProcessInputs, makeLabelsFile
 def deepLearningModel(sent_max_len):
     model = Sequential()
     model.add(Dropout(0.2))
-    model.add(LSTM(128, return_sequences=True))
-    model.add(Dropout(0.1))
-    model.add(LSTM(128, return_sequences=False))
+    model.add(LSTM(128))
     model.add(Dropout(0.2))
     model.add(Dense(len(labels), activation='softmax'))
 
