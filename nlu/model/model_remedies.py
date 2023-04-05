@@ -23,7 +23,7 @@ def deepLearningModel(sent_max_len):
     return model
 
 # load train data
-data = yaml.safe_load(open('nlu\\train_remedies.yml').read())
+data = yaml.safe_load(open('nlu\\data\\train_remedies.yml').read())
 
 # inputs is for training examples and outputs is for the problem tags
 inputs, outputs = [], []
@@ -47,7 +47,7 @@ for i, inp in enumerate(inputs):
 
 makeLabelsFile(outputs, 'entities_remedies')
 
-labels = open('nlu\entities_remedies.txt', 'r', encoding='utf-8').read().split('\n')
+labels = open('nlu\\utils\\entities_remedies.txt', 'r', encoding='utf-8').read().split('\n')
 
 label2idx = {}
 idx2label = {}
@@ -66,4 +66,4 @@ output_data = to_categorical(output_data, len(labels))
 
 model = deepLearningModel(75)
 model.fit(input_data, output_data, epochs=100, batch_size=16)
-model.save('nlu\model_remedies.h5')
+model.save('nlu\model\model_remedies.h5')

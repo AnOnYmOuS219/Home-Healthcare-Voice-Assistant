@@ -6,8 +6,8 @@ import speech_recognition
 from neuralintents import GenericAssistant
 from nlu.classifier import classify, classify_remedies
 
-data = yaml.safe_load(open('nlu\\train.yml').read())
-data_r = yaml.safe_load(open('nlu\\train_remedies.yml').read())
+data = yaml.safe_load(open('nlu\\data\\train.yml').read())
+data_r = yaml.safe_load(open('nlu\\data\\train_remedies.yml').read())
 
 recognizer = speech_recognition.Recognizer()
 
@@ -18,7 +18,7 @@ def greet():
     speak("Hi, What can I do for you?")
 
 def quit():
-    speak("Bye")
+    speak("Bye! Have a good one.")
     sys.exit(0)
 
 def recognize_disease():
@@ -77,9 +77,6 @@ def evaluate(text):
     output = classify(text)
     entity = output['entity']
     conf = float(output['conf'])
-
-    print(entity)
-    print('You said: {}  Confidence: {}'.format(text, conf))
     
     idx = -1
     for i in range(len(intents)):
@@ -93,9 +90,6 @@ def evaluate_remedies(text):
     output = classify_remedies(text)
     entity = output['entity']
     conf = float(output['conf'])
-
-    print(entity)
-    print('You said: {}  Confidence: {}'.format(text, conf))
     
     idx = -1
     for i in range(len(intents_r)):
@@ -133,6 +127,7 @@ for command in data_r['nlu']:
     intents_r.append(command['intent'])
     responses_r.append(command['response'])
 
+print("Talk now!")
 while True:
     try:
         with speech_recognition.Microphone() as mic:

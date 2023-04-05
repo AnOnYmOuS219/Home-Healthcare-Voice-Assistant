@@ -5,8 +5,8 @@ from tensorflow import keras
 from keras.models import load_model
 from nlu.utils.multi_classification_utils import preProcessInputs
 
-labels = open('nlu\entities.txt', 'r', encoding='utf-8').read().split('\n')
-model = load_model('nlu\model.h5')
+labels = open('nlu\\utils\\entities.txt', 'r', encoding='utf-8').read().split('\n')
+model = load_model('nlu\\model\\model.h5')
 
 label2idx = {}
 idx2label = {}
@@ -17,9 +17,10 @@ for k, label in enumerate(labels):
 
 def classify(text):
     x = np.zeros((1, 75, 256), dtype='float32')
-
+    print("You said: ", text)
+    
     text = preProcessInputs(text)
-    print(text)
+    print("Pre-processed text: ", text)
 
     if len(text) > 75:
         text = text[:75]
@@ -33,8 +34,8 @@ def classify(text):
     return {"entity" : idx2label[idx], "conf" : max(out[0])}
 
 
-labels_remedies = open('nlu\entities_remedies.txt', 'r', encoding='utf-8').read().split('\n')
-model_remedies = load_model('nlu\model_remedies.h5')
+labels_remedies = open('nlu\\utils\\entities_remedies.txt', 'r', encoding='utf-8').read().split('\n')
+model_remedies = load_model('nlu\\model\\model_remedies.h5')
 
 label2idx_r = {}
 idx2label_r = {}
@@ -45,9 +46,10 @@ for k, label in enumerate(labels_remedies):
 
 def classify_remedies(text):
     x = np.zeros((1, 75, 256), dtype='float32')
+    print("You said: ", text)
 
     text = preProcessInputs(text)
-    print(text)
+    print("Pre-processed text: ", text)
 
     if len(text) > 75:
         text = text[:75]

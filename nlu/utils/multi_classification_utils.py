@@ -16,7 +16,7 @@ def preProcessInputs(sen):
 
 def makeLabelsFile(outputs, fileName):
     labels = set(outputs)
-    fwrite = open('nlu\{}.txt'.format(fileName), 'w', encoding='utf-8')
+    fwrite = open('nlu\\utils\\{}.txt'.format(fileName), 'w', encoding='utf-8')
 
     for label in labels:
         fwrite.write(label + '\n')
